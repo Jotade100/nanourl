@@ -1,0 +1,22 @@
+extends layout
+html
+	head
+		title= title 
+		link(rel='stylesheet', href='../stylesheets/style.css')
+		include style.css
+		style(type="text/css")
+
+block content
+	body
+		h1= title			
+		.list-group
+			each item in lista
+				if title != "Stats by OS"
+					a.list-group-item.active( href="#{item.id}" )
+						h4.list-group-item-heading #{item.id}
+						h4.list-group-item-heading Nano: #{item.codigo}
+						p.list-group-item-text Visitas: #{item.contador}
+				else
+					a.list-group-item.active()
+						h4.list-group-item-heading #{item.sistema}
+						p.list-group-item-text Visitas: #{item.contador}

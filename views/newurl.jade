@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	.container
+		.starter-template
+		.jumbotron
+			h1
+				img.image(src="https://image.ibb.co/koPpuU/rotulo.png" style="width: 100%")
+			center
+				form#formAddUrl(name="addurl",method="post",action="/createurl")
+					p: input#inputUrl(type="text", placeholder="Introduce your URL", name="url", required, style="width: 80%")
+					p: button.btn.btn-primary.btn-lg#btnSubmit(type="submit", style="width: 50%") Nano
+		if mensaje.length > 0
+			.alert.alert-dismissable.alert-success
+				button.close( type="button", data-dismiss="alert" ) ×
+				text= mensaje
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+		script(src='/js/bootstrap.min.js')

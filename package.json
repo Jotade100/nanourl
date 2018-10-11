@@ -1,0 +1,23 @@
+{
+  "name": "ejemplo25-9",
+  "version": "1.0.0",
+  "description": "Ejemplo de hoy",
+  "main": "nanourl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build -t ",
+	"start": "node nanourl.js"
+  },
+  "keywords": [
+    "Ejemplo",
+    "Progra3"
+  ],
+  "author": "Iohannes Iacobus",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^1.2.3",
+    "express": "^4.16.3",
+    "jade": "^1.11.0",
+    "mysql": "^2.16.0"
+  }
+}
